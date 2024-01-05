@@ -64,7 +64,7 @@ const Header = ({ data }) => {
             </div>
           </div>
         ))}
-      <div className='mb-10 flex flex-wrap items-end rounded-b-lg bg-indigo-200 pb-10 pt-11'>
+      <div className='mb-10 flex flex-wrap items-end rounded-b-lg pb-10 pt-11'>
         <Swiper
           Category={'11P'}
           swipes={elevenSwipes}

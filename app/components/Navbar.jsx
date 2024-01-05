@@ -6,13 +6,14 @@ const Navbar = () => {
     <main className='flex items-center justify-between rounded-lg bg-gradient-to-r from-indigo-500 px-20 py-5'>
       <div className='pl-5 text-xl text-white'>UCLA Swipes</div>
       <div className='flex items-center pr-5 text-xl'>
-        <span className='pr-4 text-black'>Presented by</span>
+        <span className='hidden pr-4 text-black md:flex'>Presented by</span>
         <Link href='https://www.uclabv.com' target='_blank'>
           <Image
             src='/BVSticker.png'
-            width={100}
+            width={120}
             height={0}
             alt='Bruin Ventures'
+            className='rounded-md bg-white p-3'
           ></Image>
         </Link>
       </div>

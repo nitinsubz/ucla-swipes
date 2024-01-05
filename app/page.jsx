@@ -1,16 +1,7 @@
 'use client';
 
-import Image from 'next/image';
-import { Swiper, Navbar, Header } from './components';
-import {
-  get11PSwipes,
-  get14PSwipes,
-  get19PSwipes,
-  getMeal,
-  getTime,
-} from './endpoints';
-import { NumberSlider } from './components';
-import Head from 'next/head';
+import { Navbar, Header } from './components';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -19,6 +10,18 @@ export default function Home() {
 
       <div className='m-10'>
         <Header />
+        <div className='text-center'>
+          <Link
+            href='https://myhousing.hhs.ucla.edu/shib/swipes'
+            target='_blank'
+          >
+            <div className='inline-block'>
+              <div className='flex items-center justify-center rounded-2xl bg-indigo-500 p-5'>
+                <span className='text-white'>View My Current Balance</span>
+              </div>
+            </div>
+          </Link>
+        </div>
       </div>
     </main>
   );

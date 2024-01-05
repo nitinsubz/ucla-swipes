@@ -54,7 +54,7 @@ const Header = ({ data }) => {
                 <input
                   type='range'
                   min='0'
-                  max='15'
+                  max='7'
                   value={sliderValue}
                   onChange={handleSliderChange}
                   className='ml-4 w-full'

@@ -1,6 +1,6 @@
 const Swiper = ({ Category, swipes, exception }) => {
   return (
-    <div className='w-96 rounded-xl bg-white shadow-md my-5'>
+    <div className='my-5 w-96 rounded-xl bg-white shadow-md'>
       <div className='md:flex'>
         <div className='p-8'>
           <div className='text-lg font-semibold uppercase tracking-wide text-indigo-500'>

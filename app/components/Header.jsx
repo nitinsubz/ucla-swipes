@@ -37,17 +37,18 @@ const Header = () => {
             <div className='text-center'>
               <div className='text-center'>
                 <p className='text-3xl leading-loose'>
-                  After using <span className='text-blue-700'>{sliderValue}</span>{' '}
-                  swipe(s) today, {new Date().toLocaleString('en-US', options)},
-                  you should have...
+                  After using{' '}
+                  <span className='text-blue-700'>{sliderValue}</span> swipe(s)
+                  today, {new Date().toLocaleString('en-US', options)}, you
+                  should have...
                 </p>
               </div>
             </div>
             <div className=''>
-              <div className='mt-5 flex flex-col sm:flex-row items-center rounded-lg bg-white px-10 py-7'>
+              <div className='mt-5 flex flex-col items-center rounded-lg bg-white px-10 py-7 sm:flex-row'>
                 <label
                   htmlFor='mySlider'
-                  className='mb-2 text-lg font-semibold text-center'
+                  className='mb-2 text-center text-lg font-semibold'
                 >
                   Swipes Used Today
                 </label>
@@ -64,8 +65,8 @@ const Header = () => {
             </div>
           </div>
         ))}
-      <div className='mb-10 flex flex-wrap rounded-b-lg pt-11 justify-evenly gap-10'>
-       <Swiper
+      <div className='mb-10 flex flex-wrap justify-evenly gap-10 rounded-b-lg pt-11'>
+        <Swiper
           Category={'11P'}
           swipes={elevenSwipes}
           exception={elevenData.exception}

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <main className='flex items-center justify-between bg-indigo-400 px-20 py-5'>
+    <main className='flex items-center justify-between bg-indigo-400 py-5 sm:px-10 lg:px-20'>
       <div className='pl-5 text-xl text-white'>UCLA Swipes</div>
       <div className='flex items-center pr-5 text-xl'>
         <span className='hidden pr-4 text-white md:flex'>Presented by</span>

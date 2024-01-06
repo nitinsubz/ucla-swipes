@@ -9,7 +9,7 @@ const options = {
   day: 'numeric',
 };
 
-const Header = ({ data }) => {
+const Header = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const startDate = new Date('January 7, 2024');
 
@@ -30,7 +30,7 @@ const Header = ({ data }) => {
   };
 
   return (
-    <div>
+    <div className=''>
       {startDate.getTime() < new Date().getTime() ||
         (true && (
           <div>
@@ -57,15 +57,15 @@ const Header = ({ data }) => {
                   max='7'
                   value={sliderValue}
                   onChange={handleSliderChange}
-                  className='ml-4 w-full'
+                  className='ml-4 w-full bg-blue-50'
                   id='mySlider'
                 />
               </div>
             </div>
           </div>
         ))}
-      <div className='mb-10 flex flex-wrap items-end rounded-b-lg pb-10 pt-11'>
-        <Swiper
+      <div className='mb-10 flex flex-wrap rounded-b-lg pt-11 justify-evenly gap-10'>
+       <Swiper
           Category={'11P'}
           swipes={elevenSwipes}
           exception={elevenData.exception}

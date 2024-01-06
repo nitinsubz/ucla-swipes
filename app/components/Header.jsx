@@ -55,7 +55,7 @@ const Header = () => {
                 <input
                   type='range'
                   min='0'
-                  max='7'
+                  max='5'
                   value={sliderValue}
                   onChange={handleSliderChange}
                   className='ml-4 w-full bg-blue-50'
@@ -65,7 +65,7 @@ const Header = () => {
             </div>
           </div>
         ))}
-      <div className='mb-10 flex flex-wrap justify-evenly gap-10 rounded-b-lg pt-11'>
+      <div className='mb-10 flex flex-wrap justify-evenly xl:justify-between gap-10 rounded-b-lg pt-11'>
         <Swiper
           Category={'11P'}
           swipes={elevenSwipes}

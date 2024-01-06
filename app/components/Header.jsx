@@ -37,19 +37,19 @@ const Header = () => {
             <div className='text-center'>
               <div className='text-center'>
                 <p className='text-3xl leading-loose'>
-                  After using <span className='underline'>{sliderValue}</span>{' '}
+                  After using <span className='text-blue-700'>{sliderValue}</span>{' '}
                   swipe(s) today, {new Date().toLocaleString('en-US', options)},
                   you should have...
                 </p>
               </div>
             </div>
             <div className=''>
-              <div className='mt-5 flex flex-row items-center rounded-lg bg-white px-10 py-4'>
+              <div className='mt-5 flex flex-col sm:flex-row items-center rounded-lg bg-white px-10 py-7'>
                 <label
                   htmlFor='mySlider'
-                  className='mb-2 text-lg font-semibold'
+                  className='mb-2 text-lg font-semibold text-center'
                 >
-                  Swipes used today
+                  Swipes Used Today
                 </label>
                 <input
                   type='range'

@@ -1,3 +1,5 @@
+import getStartDate from './getStartDate';
+
 const options = {
   timeZone: 'America/Los_Angeles',
   month: 'long', // Full month name
@@ -9,7 +11,9 @@ const getSwipesConsumer = (date) => {
   return 2;
 };
 
-const get14PSwipes = ({ startDate }) => {
+const get14PSwipes = () => {
+  const startDate = getStartDate();
+
   const startingSwipes = 151;
   if (new Date().getTime() < startDate.getTime()) {
     return {

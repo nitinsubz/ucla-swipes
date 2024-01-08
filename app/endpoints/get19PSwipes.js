@@ -1,3 +1,5 @@
+import getStartDate from './getStartDate';
+
 const options = {
   timeZone: 'America/Los_Angeles',
   month: 'long', // Full month name
@@ -13,7 +15,8 @@ const getSwipesConsumer = (date) => {
   }
 };
 
-const get14PSwipes = ({ startDate }) => {
+const get14PSwipes = () => {
+  const startDate = getStartDate();
   const startingSwipes = 205;
   if (new Date().getTime() < startDate.getTime()) {
     return {
@@ -23,7 +26,7 @@ const get14PSwipes = ({ startDate }) => {
   }
   var specialDates = { 'January 7, 2024': 1, 'March 22, 2024': 2 };
 
-  const now = new Date('March 22, 2024').toLocaleString('en-US', options);
+  const now = new Date().toLocaleString('en-US', options);
   let total = startingSwipes;
   while (startDate.toLocaleString('en-US', options) != now && total > 0) {
     if (specialDates[startDate.toLocaleString('en-US', options)] != undefined) {

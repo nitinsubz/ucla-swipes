@@ -7,29 +7,6 @@ const options = {
   year: 'numeric',
 };
 
-/*
-var startDate = new Date("September 24, 2023")
-var endDate = new Date()
-
-function ep() {
-    var total = 128;
-    var ep = {"11/23/2023" : 0, "11/24/2023" : 0, "11/25/2023" : 0, "11/26/2023" : 1}
-    var startDate = new Date("September 24, 2023")
-    while(startDate.toLocaleDateString() != endDate.toLocaleDateString() && total > 0) {
-        if(ep[startDate.toLocaleDateString()]  >= 0) {
-            total -= ep[startDate.toLocaleDateString()]
-        } else {
-            if(startDate.getDay() == 6) {
-                total -= 0
-            }else if(startDate.getDay() == 0) {
-                total -= 1
-            } else {
-                total -= 2
-            }
-        }
-        startDate.setDate(startDate.getDate()+1)
-    }
-*/
 
 const getSwipesConsumer = (date) => {
   if (date.getDay() == 6) {
@@ -52,7 +29,7 @@ const get11PSwipes = () => {
   }
   var specialDates = {};
   // const startDate = new Date("September 24, 2023");
-  const now = new Date('January 12, 2024').toLocaleString('en-US', options);
+  const now = new Date().toLocaleString('en-US', options);
   let total = startingSwipes;
   while (startDate.toLocaleString('en-US', options) != now) {
     total -= getSwipesConsumer(startDate);

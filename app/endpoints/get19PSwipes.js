@@ -28,7 +28,7 @@ const get14PSwipes = () => {
 
   const now = new Date().toLocaleString('en-US', options);
   let total = startingSwipes;
-  while (startDate.toLocaleString('en-US', options) != now && total > 0) {
+  while (startDate.toLocaleString('en-US', options) !== now && total > 0) {
     if (specialDates[startDate.toLocaleString('en-US', options)] != undefined) {
       total -= specialDates[startDate.toLocaleString('en-US', options)];
     } else {

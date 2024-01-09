@@ -41,7 +41,7 @@ const Header = () => {
             </p>
           </div>
         </div>
-        <div className=''>
+        <div className='' ontouchstart="">
           <div className='mt-5 flex flex-col items-center rounded-lg bg-white px-10 sm:flex-row justify-center'>
             <a className= 'text-center text-lg font-semibold py-4'>
               Swipes Used Today

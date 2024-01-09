@@ -47,16 +47,16 @@ const Header = () => {
               Swipes Used Today
             </a>
             <div className='py-4 flex flex-row'>
-              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={0}>
+              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={0}>
                 0
               </button>
-              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={1}>
+              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={1}>
                 1
               </button>
-              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={2}>
+              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={2}>
                 2
               </button>
-              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={3}>
+              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={3}>
                 3
               </button>
             </div>

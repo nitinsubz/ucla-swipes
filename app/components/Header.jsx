@@ -22,6 +22,7 @@ const Header = () => {
   const [ninteenSwipes, setNinteenSwipes] = useState(ninteenData.swipes);
 
   const handleSliderChange = (event) => {
+    console.log(event);
     setSliderValue(event.target.value);
     setElevenSwipes(elevenData.swipes - event.target.value);
     setFourteenSwipes(fourteenData.swipes - event.target.value);
@@ -41,22 +42,24 @@ const Header = () => {
           </div>
         </div>
         <div className=''>
-          <div className='mt-5 flex flex-col items-center rounded-lg bg-white px-10 py-7 sm:flex-row'>
-            <label
-              htmlFor='mySlider'
-              className='mb-2 text-center text-lg font-semibold'
-            >
+          <div className='mt-5 flex flex-col items-center rounded-lg bg-white px-10 sm:flex-row justify-center'>
+            <a className= 'text-center text-lg font-semibold py-4'>
               Swipes Used Today
-            </label>
-            <input
-              type='range'
-              min='0'
-              max='5'
-              value={sliderValue}
-              onChange={handleSliderChange}
-              className='ml-4 w-full bg-blue-50'
-              id='mySlider'
-            />
+            </a>
+            <div className='py-4 flex flex-row'>
+              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={0}>
+                0
+              </button>
+              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={1}>
+                1
+              </button>
+              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={2}>
+                2
+              </button>
+              <button onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={3}>
+                3
+              </button>
+            </div>
           </div>
         </div>
       </div>

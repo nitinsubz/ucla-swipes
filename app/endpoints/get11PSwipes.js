@@ -7,7 +7,6 @@ const options = {
   year: 'numeric',
 };
 
-
 const getSwipesConsumer = (date) => {
   if (date.getDay() == 6) {
     return 0;

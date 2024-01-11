@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { get11PSwipes, get14PSwipes, get19PSwipes } from '../endpoints';
 import { Swiper } from '.';
+import { button } from '@nextui-org/react';
 
 const options = {
   timeZone: 'America/Los_Angeles',
@@ -10,7 +11,7 @@ const options = {
 };
 
 const Header = () => {
-  const [sliderValue, setSliderValue] = useState(0);
+  const [selectedButton, setSelectedButton] = useState(0);
 
   const elevenData = get11PSwipes();
   const [elevenSwipes, setElevenSwipes] = useState(elevenData.swipes);
@@ -21,12 +22,11 @@ const Header = () => {
   const ninteenData = get19PSwipes();
   const [ninteenSwipes, setNinteenSwipes] = useState(ninteenData.swipes);
 
-  const handleSliderChange = (event) => {
-    console.log(event);
-    setSliderValue(event.target.value);
-    setElevenSwipes(elevenData.swipes - event.target.value);
-    setFourteenSwipes(fourteenData.swipes - event.target.value);
-    setNinteenSwipes(ninteenData.swipes - event.target.value);
+  const onButtonClick = (buttonNumber) => {
+    setSelectedButton(buttonNumber);
+    setElevenSwipes(elevenData.swipes - buttonNumber);
+    setFourteenSwipes(fourteenData.swipes - buttonNumber);
+    setNinteenSwipes(ninteenData.swipes - buttonNumber);
   };
 
   return (
@@ -35,28 +35,57 @@ const Header = () => {
         <div className='text-center'>
           <div className='text-center'>
             <p className='text-3xl leading-loose'>
-              After using <span className='text-blue-700'>{sliderValue}</span>{' '}
-              swipe(s) today, {new Date().toLocaleString('en-US', options)}, you
-              should have...
+              After using{' '}
+              <span className='text-blue-700'>{selectedButton}</span> swipe(s)
+              today, {new Date().toLocaleString('en-US', options)}, you should
+              have...
             </p>
           </div>
         </div>
         <div className=''>
-          <div className='mt-5 flex flex-col items-center rounded-lg bg-white px-10 sm:flex-row justify-center'>
-            <a className= 'text-center text-lg font-semibold py-4'>
+          <div className='mt-5 flex flex-col items-center justify-center rounded-lg bg-white px-10 sm:flex-row'>
+            <a className='py-4 text-center text-lg font-semibold'>
               Swipes Used Today
             </a>
-            <div className='py-4 flex flex-row'>
-              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={0}>
+            <div className='flex flex-row py-4'>
+              <button
+                onClick={() => onButtonClick(0)}
+                className={`${
+                  selectedButton === 0
+                    ? 'bg-indigo-700 text-white'
+                    : 'bg-indigo-300 text-black'
+                } mx-4 rounded px-4 py-2 font-bold `}
+              >
                 0
               </button>
-              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={1}>
+              <button
+                onClick={() => onButtonClick(1)}
+                className={`${
+                  selectedButton === 1
+                    ? 'bg-indigo-700 text-white'
+                    : 'bg-indigo-300 text-black'
+                } mx-4 rounded px-4 py-2 font-bold `}
+              >
                 1
               </button>
-              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={2}>
+              <button
+                onClick={() => onButtonClick(2)}
+                className={`${
+                  selectedButton === 2
+                    ? 'bg-indigo-700 text-white'
+                    : 'bg-indigo-300 text-black'
+                } mx-4 rounded px-4 py-2 font-bold `}
+              >
                 2
               </button>
-              <button tabIndex="0" onClick={handleSliderChange} className='mx-4 rounded bg-indigo-300 px-4 py-2 font-bold text-black focus:bg-indigo-700 focus:text-white' value={3}>
+              <button
+                onClick={() => onButtonClick(3)}
+                className={`${
+                  selectedButton === 3
+                    ? 'bg-indigo-700 text-white'
+                    : 'bg-indigo-300 text-black'
+                } mx-4 rounded px-4 py-2 font-bold `}
+              >
                 3
               </button>
             </div>

@@ -22,6 +22,20 @@ const Header = () => {
   const ninteenData = get19PSwipes();
   const [ninteenSwipes, setNinteenSwipes] = useState(ninteenData.swipes);
 
+  const renderButton = (buttonNumber) => (
+    <button
+      key={buttonNumber}
+      onClick={() => onButtonClick(buttonNumber)}
+      className={`${
+        selectedButton === buttonNumber
+          ? 'bg-indigo-700 text-white'
+          : 'bg-indigo-300 text-black'
+      } mx-4 rounded px-4 py-2 font-bold`}
+    >
+      {buttonNumber}
+    </button>
+  );
+
   const onButtonClick = (buttonNumber) => {
     setSelectedButton(buttonNumber);
     setElevenSwipes(elevenData.swipes - buttonNumber);
@@ -48,46 +62,7 @@ const Header = () => {
               Swipes Used Today
             </a>
             <div className='flex flex-row py-4'>
-              <button
-                onClick={() => onButtonClick(0)}
-                className={`${
-                  selectedButton === 0
-                    ? 'bg-indigo-700 text-white'
-                    : 'bg-indigo-300 text-black'
-                } mx-4 rounded px-4 py-2 font-bold `}
-              >
-                0
-              </button>
-              <button
-                onClick={() => onButtonClick(1)}
-                className={`${
-                  selectedButton === 1
-                    ? 'bg-indigo-700 text-white'
-                    : 'bg-indigo-300 text-black'
-                } mx-4 rounded px-4 py-2 font-bold `}
-              >
-                1
-              </button>
-              <button
-                onClick={() => onButtonClick(2)}
-                className={`${
-                  selectedButton === 2
-                    ? 'bg-indigo-700 text-white'
-                    : 'bg-indigo-300 text-black'
-                } mx-4 rounded px-4 py-2 font-bold `}
-              >
-                2
-              </button>
-              <button
-                onClick={() => onButtonClick(3)}
-                className={`${
-                  selectedButton === 3
-                    ? 'bg-indigo-700 text-white'
-                    : 'bg-indigo-300 text-black'
-                } mx-4 rounded px-4 py-2 font-bold `}
-              >
-                3
-              </button>
+              {[0, 1, 2, 3].map(renderButton)}
             </div>
           </div>
         </div>

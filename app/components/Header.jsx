@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { get11PSwipes, get14PSwipes, get19PSwipes } from '../endpoints';
 import { Swiper } from '.';
-import { button } from '@nextui-org/react';
 
 const options = {
   timeZone: 'America/Los_Angeles',
@@ -50,7 +49,8 @@ const Header = () => {
           <div className='text-center'>
             <p className='text-3xl leading-loose'>
               After using{' '}
-              <span className='text-blue-700'>{selectedButton}</span> swipe(s)
+              <span className='text-blue-700'>{selectedButton}</span>{' '}
+              {selectedButton === 0 ? 'swipes ' : 'swipe '}
               today, {new Date().toLocaleString('en-US', options)}, you should
               have...
             </p>

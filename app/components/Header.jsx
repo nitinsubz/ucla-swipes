@@ -50,7 +50,7 @@ const Header = () => {
             <p className='text-3xl leading-loose'>
               After using{' '}
               <span className='text-blue-700'>{selectedButton}</span>{' '}
-              {selectedButton === 0 ? 'swipes ' : 'swipe '}
+              {selectedButton === 1 ? 'swipe ' : 'swipes '}
               today, {new Date().toLocaleString('en-US', options)}, you should
               have...
             </p>

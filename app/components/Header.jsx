@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { get11PSwipes, get14PSwipes, get19PSwipes } from '../endpoints';
-import { Swiper } from '.';
+import { NumberSlider, Swiper } from '.';
 
 const options = {
   timeZone: 'America/Los_Angeles',
@@ -37,9 +37,9 @@ const Header = () => {
 
   const onButtonClick = (buttonNumber) => {
     setSelectedButton(buttonNumber);
-    setElevenSwipes(elevenData.swipes - buttonNumber);
-    setFourteenSwipes(fourteenData.swipes - buttonNumber);
-    setNinteenSwipes(ninteenData.swipes - buttonNumber);
+    setElevenSwipes(elevenData.swipes - buttonNumber > 0 ? elevenData.swipes - buttonNumber : 0);
+    setFourteenSwipes(fourteenData.swipes - buttonNumber > 0 ? fourteenData.swipes - buttonNumber : 0);
+    setNinteenSwipes(ninteenData.swipes - buttonNumber > 0 ? ninteenData.swipes - buttonNumber : 0);
   };
 
   return (

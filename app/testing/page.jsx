@@ -25,8 +25,8 @@ export default function Home() {
         </thead>
         <tbody>
         {
-            testDate.map((item) => (
-                    <tr>
+            testDate.map((item, index) => (
+                    <tr key={index}>
                         <td className="border px-4 py-2">{new Date(item).toDateString()}</td>
                         <td className="border px-4 py-2">{ get11PSwipes(item).swipes }</td>
                         <td className="border px-4 py-2">{ get14PSwipes(item).swipes }</td>

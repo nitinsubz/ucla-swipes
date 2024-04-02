@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "@vercel/postgres": "^0.7.2",
     "next": "14.0.4",
     "pg": "^8.11.3",
     "postgres": "^3.4.4",

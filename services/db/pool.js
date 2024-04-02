@@ -1,27 +1,6 @@
-// import { Pool } from 'pg';
-
-// const pool = new Pool({
-// 	user: process.env.AWS_AURORA_USER,
-// 	host: process.env.AWS_AURORA_HOST,
-// 	database: process.env.AWS_AURORA_DB,
-// 	password: process.env.AWS_AURORA_PASSWORD,
-// 	port: process.env.AWS_AURORA_PORT,
-// });
-
-// export default pool;
-// pages/api/hello_world.js
-
-import { Pool } from 'pg';
-
-let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
+import Pool from 'pg';
 
 
 const pool = new Pool({
-  host: PGHOST,
-  database: PGDATABASE,
-  username: PGUSER,
-  password: PGPASSWORD,
-  port: 5432,
-});
-
-export default pool;
+  connectionString: "postgres://default:QDCbdf1q9owG@ep-empty-wave-a4mpyn7e-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+})

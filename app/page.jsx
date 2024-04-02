@@ -9,7 +9,7 @@ export default function Home() {
   const handleClick = async () => {
     // go to database 
     let res = await addStartDates("w24", "09/23/23");
-    //console.log(res);
+    console.log(res);
   } 
 
   return (
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             
           </Link>
-          {/* <br></br>
+          <br></br>
             <br></br>
             <button onClick={() => handleClick()}>
               <div className='inline-block'>
@@ -38,7 +38,7 @@ export default function Home() {
                   <span className='text-white'>I'm Feeling Lucky</span>
                 </div>
               </div>
-            </button> */}
+            </button>
         </div>
       </div>
     </main>

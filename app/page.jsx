@@ -69,7 +69,7 @@ export default function Home() {
           <button onClick={handleClick}>
             <div className="inline-block">
               <div className="flex items-center justify-center rounded-2xl bg-indigo-500 p-5">
-                <span className="text-white">I'm Feeling Lucky. Courtesy of Bruin Ventures</span>
+                <span className="text-white">Feeling Lucky? Courtesy of Bruin Ventures.</span>
               </div>
             </div>
           </button>

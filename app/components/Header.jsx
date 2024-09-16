@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { get11PSwipes, get14PSwipes, get19PSwipes } from '../endpoints';
+import { get7PSwipes, get11PSwipes, get14PSwipes, get19PSwipes } from '../endpoints';
 import { NumberSlider, Swiper } from '.';
 
 const options = {
@@ -12,6 +12,9 @@ const options = {
 const Header = () => {
   const [selectedButton, setSelectedButton] = useState(0);
 
+  const sevenData = get7PSwipes();
+  const [sevenSwipes, setSevenSwipes] = useState(sevenData.swipes);
+  
   const elevenData = get11PSwipes();
   const [elevenSwipes, setElevenSwipes] = useState(elevenData.swipes);
 
@@ -21,25 +24,14 @@ const Header = () => {
   const ninteenData = get19PSwipes();
   const [ninteenSwipes, setNinteenSwipes] = useState(ninteenData.swipes);
 
-  const renderButton = (buttonNumber) => (
-    <button
-      key={buttonNumber}
-      onClick={() => onButtonClick(buttonNumber)}
-      className={`${
-        selectedButton === buttonNumber
-          ? 'bg-indigo-700 text-white'
-          : 'bg-indigo-300 text-black'
-      } mx-4 rounded px-4 py-2 font-bold`}
-    >
-      {buttonNumber}
-    </button>
-  );
-
-  const onButtonClick = (buttonNumber) => {
-    setSelectedButton(buttonNumber);
-    setElevenSwipes(elevenData.swipes - buttonNumber > 0 ? elevenData.swipes - buttonNumber : 0);
-    setFourteenSwipes(fourteenData.swipes - buttonNumber > 0 ? fourteenData.swipes - buttonNumber : 0);
-    setNinteenSwipes(ninteenData.swipes - buttonNumber > 0 ? ninteenData.swipes - buttonNumber : 0);
+  // Function to handle changes in the dropdown selection
+  const handleSelectChange = (event) => {
+    const value = parseInt(event.target.value, 10);
+    setSelectedButton(value);
+    setSevenSwipes(sevenData.swipes - value > 0 ? sevenData.swipes - value : 0);
+    setElevenSwipes(elevenData.swipes - value > 0 ? elevenData.swipes - value : 0);
+    setFourteenSwipes(fourteenData.swipes - value > 0 ? fourteenData.swipes - value : 0);
+    setNinteenSwipes(ninteenData.swipes - value > 0 ? ninteenData.swipes - value : 0);
   };
 
   return (
@@ -62,12 +54,27 @@ const Header = () => {
               Swipes Used Today
             </a>
             <div className='flex flex-row py-4'>
-              {[0, 1, 2, 3].map(renderButton)}
+              <select
+                value={selectedButton}
+                onChange={handleSelectChange}
+                className="mx-4 rounded px-4 py-2 font-bold bg-indigo-300 text-black"
+              >
+                {[...Array(11).keys()].map((number) => (
+                  <option key={number} value={number}>
+                    {number}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
       </div>
       <div className='mb-10 flex flex-wrap justify-evenly gap-10 rounded-b-lg pt-11 xl:justify-between'>
+        <Swiper
+          Category={'7P'}
+          swipes={sevenSwipes}
+          exception={sevenData.exception}
+        />
         <Swiper
           Category={'11P'}
           swipes={elevenSwipes}

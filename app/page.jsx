@@ -36,7 +36,7 @@ export default function Home() {
       );
     } else {
       // User doesn't win
-      setModalMessage('Better Luck Next Time.');
+      setModalMessage('Today is not your lucky day. Try again tomorrow.');
     }
 
     // Open the modal
@@ -69,7 +69,7 @@ export default function Home() {
           <button onClick={handleClick}>
             <div className="inline-block">
               <div className="flex items-center justify-center rounded-2xl bg-indigo-500 p-5">
-                <span className="text-white">Every 100th Person Wins a Giftcard. Courtesy of Bruin Ventures</span>
+                <span className="text-white">I'm Feeling Lucky. Courtesy of Bruin Ventures</span>
               </div>
             </div>
           </button>

@@ -22,9 +22,6 @@ export default function Home() {
   };
   
   const handleClick = async () => {
-    // Existing code: interact with the database
-    //let res = await addStartDates('w24', '09/23/23');
-    //console.log(res);
 
     // New code: Generate a random chance
     const chance = Math.random();

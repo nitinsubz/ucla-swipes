@@ -70,11 +70,11 @@ const Header = () => {
         </div>
       </div>
       <div className='mb-10 flex flex-wrap justify-evenly gap-10 rounded-b-lg pt-11 xl:justify-between'>
-        <Swiper
+{/*         <Swiper
           Category={'7P'}
           swipes={sevenSwipes}
           exception={sevenData.exception}
-        />
+        /> */}
         <Swiper
           Category={'11P'}
           swipes={elevenSwipes}

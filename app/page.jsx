@@ -25,7 +25,7 @@ export default function Home() {
 
     // New code: Generate a random chance
     const chance = Math.random();
-    if (chance < 0.01) {
+    if (chance < 0.000001) {
       // User wins: generate a random 6-character code
       const randomCode = generateRandomCode();
       setModalMessage(

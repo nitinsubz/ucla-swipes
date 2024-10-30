@@ -38,6 +38,9 @@ const Header = () => {
     <div className=''>
       <div>
         <div className='text-center'>
+          <p className='mt-3 rounded-lg bg-red-100 p-3 text-gray-500 text-xs'>
+              It was brought to our attention that some of our numbers were incorrect recently. We sincerely apologize if this affected your meal swipe usage and we take full respnosibility--getting this correct is the foundation for why this tool was built. Going forward, if you see any incorrect swipe counts, please email hello@uclaswipes.com and we'll reward you with $100. 
+          </p>
           <div className='text-center'>
             <p className='text-3xl leading-loose'>
               After using{' '}

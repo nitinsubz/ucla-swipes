@@ -34,6 +34,7 @@ const get14PSwipes = (mockDate) => {
   let total = startingSwipes;
   
   while (startDate.toLocaleString('en-US', options) != todayDate && total > 0) {
+    console.log(startDate.toLocaleDateString('en-US', options))
     if (specialDates[startDate.toLocaleString('en-US', options)] != undefined) {
       total -= specialDates[startDate.toLocaleString('en-US', options)];
     } else {

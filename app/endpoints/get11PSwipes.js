@@ -36,14 +36,19 @@ const get11PSwipes = (mockDate) => {
   }
 
 
-  var specialDates = {'November 28, 2024' : 0, 'November 29, 2024': 0, 'November 30, 2024': 0, 'December 1, 2024': 1};
+  var specialDates = {'November 28, 2024' : 0, 'November 29, 2024': 0, 'November 30, 2024': 0};
 
   let total = startingSwipes;
   while (startDate.toLocaleString('en-US', options) != todayDate) {
-    total -= getSwipesConsumer(startDate);
+    if (specialDates[startDate.toLocaleString('en-US', options)] != undefined) {
+      total -= specialDates[startDate.toLocaleString('en-US', options)];
+    } else {
+      total -= getSwipesConsumer(startDate);
+    }
     startDate.setDate(startDate.getDate() + 1);
   }
   let except = '';
+
   if (specialDates[todayDate] != undefined) {
     except =
       'Today you have ' +

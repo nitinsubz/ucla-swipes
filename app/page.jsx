@@ -63,13 +63,22 @@ export default function Home() {
           </Link>
           <br />
           <br />
-          <button onClick={handleClick}>
-            <div className="inline-block">
-              <div className="flex items-center justify-center rounded-2xl bg-indigo-500 p-5">
-                <span className="text-white">Feeling Lucky? Courtesy of Bruin Ventures.</span>
-              </div>
-            </div>
-          </button>
+          
+          {/* Support section */}
+          <div className="mt-8">
+            <Link
+              target='_blank'
+              href="https://buymeacoffee.com/nitinsub"
+              className="text-indigo-600 hover:text-indigo-800 underline"
+            >
+              Want to support UCLA Swipes?
+            </Link>
+          {/* Bug bounty notice */}
+          <div className="mt-4 text-sm text-gray-600">
+            See an incorrect swipe count? Email hello@uclaswipes.com for a $100 bounty!
+          </div>
+          </div>
+          
         </div>
       </div>
 

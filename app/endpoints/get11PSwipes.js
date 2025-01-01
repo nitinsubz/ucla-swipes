@@ -20,7 +20,7 @@ const get11PSwipes = (mockDate) => {
   let dateData = getStartDate();
   let startDate = dateData.startDate;
   let today = dateData.today;
-  const startingSwipes = 128;
+  const startingSwipes = 121;
 
   if (!mockDate && today.getTime() < startDate.getTime()) {
     return {

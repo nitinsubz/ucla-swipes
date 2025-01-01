@@ -75,15 +75,6 @@ export default function Home() {
           <br />
           <br />
           
-          {/* Ad Banner */}
-          <div className="my-8 p-4 bg-white rounded-lg shadow-md">
-            <Link href="https://ugcgenerator.com" target="_blank">
-              <div className="text-lg font-semibold text-indigo-600 hover:text-indigo-800">
-                Turn ideas into ads in minutes with AI →
-              </div>
-            </Link>
-          </div>
-          
           {/* Support section */}
           <div className="mt-8">
             <Link

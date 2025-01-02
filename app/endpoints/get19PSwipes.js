@@ -32,8 +32,7 @@ const get19PSwipes = (mockDate) => {
   if(mockDate) {
     todayDate = new Date(mockDate).toLocaleString('en-US', options)
   }
-
-  var specialDates = { 'September 22, 2024': 1, 'November 28, 2024' : 0, 'November 29, 2024': 0, 'November 30, 2024': 0, 'December 1, 2024': 1};
+  var specialDates = { 'January 5, 2025': 1, 'March 21, 2025': 2};
 
   let total = startingSwipes;
   while (startDate.toLocaleString('en-US', options) !== todayDate && total > 0) {

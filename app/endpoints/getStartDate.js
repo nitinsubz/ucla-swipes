@@ -39,7 +39,7 @@ const getStartDate = () => {
 
   return {
     startDate: new Date('January 5, 2025'),
-    today: new Date()
+    today: new Date('March 21, 2025')
   };
 };
 

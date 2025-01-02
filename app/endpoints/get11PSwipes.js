@@ -36,7 +36,7 @@ const get11PSwipes = (mockDate) => {
   }
 
 
-  var specialDates = {'November 28, 2024' : 0, 'November 29, 2024': 0, 'November 30, 2024': 0};
+  var specialDates = {};
 
   let total = startingSwipes;
   while (startDate.toLocaleString('en-US', options) != todayDate) {

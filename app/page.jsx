@@ -47,18 +47,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-indigo-100 pb-11 font-mono">
       <Navbar />
-
-      {/* Ad Banner */}
-      <div className="flex justify-center mt-10">
-        <div className="w-[600px] p-4 bg-white rounded-lg shadow-md text-center px-10">
-          <Link href="https://ugcgenerator.com" target="_blank">
-            <div className="text-lg font-semibold text-indigo-600 hover:text-indigo-800">
-              Turn ideas into ads in minutes with AI → ugcgenerator.com
-            </div>
-          </Link>
-        </div>
-      </div>
-
       <div className="m-10">
         <Header />
         <div className="text-center">

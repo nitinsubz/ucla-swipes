@@ -38,7 +38,7 @@ WHERE quarter = '{current_quarter}' AND plan = '{plan}';
 const getStartDate = () => {
 
   return {
-    startDate: new Date('January 5, 2025'),
+    startDate: new Date('March 30, 2025'),
     today: new Date()
   };
 };

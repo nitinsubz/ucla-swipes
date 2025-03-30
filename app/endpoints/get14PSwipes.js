@@ -29,7 +29,7 @@ const get14PSwipes = (mockDate) => {
     todayDate = new Date(mockDate).toLocaleString('en-US', options)
   }
 
-  var specialDates = { 'January 5, 2025': 1 };
+  var specialDates = { 'March 30, 2025': 1 };
   
   let total = startingSwipes;
   

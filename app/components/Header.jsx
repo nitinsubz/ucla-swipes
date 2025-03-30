@@ -46,7 +46,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-white mb-2">Welcome to Spring Quarter!</h1>
-            <p className="text-white text-lg">Can you believe you go to the greatest school in the world? Yeah, we can't either.</p>
+            <p className="text-white text-lg">Can you believe you go to the greatest school in the world? Yeah, we can&apos;t either.</p>
           </div>
         </div>
       </div>

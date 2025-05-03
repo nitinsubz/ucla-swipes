@@ -42,14 +42,6 @@ const Header = () => {
   
   return (
     <div className=''>
-      <div className="w-full bg-gradient-to-r from-purple-300 via-purple-700 to-indigo-500 py-4 mb-8 rounded-lg shadow-lg">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-white mb-2">Welcome to Spring Quarter!</h1>
-            <p className="text-white text-lg">Can you believe you go to the greatest school in the world? Yeah, we can&apos;t either.</p>
-          </div>
-        </div>
-      </div>
       <div>
         <div className='text-center'>
           <div className='text-center'>

@@ -11,35 +11,6 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
 
-  const generateRandomCode = () => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    const charactersLength = characters.length;
-    for (let i = 0; i < 6; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  };
-  
-  const handleClick = async () => {
-
-    // New code: Generate a random chance
-    const chance = Math.random();
-    if (chance < 0.000001) {
-      // User wins: generate a random 6-character code
-      const randomCode = generateRandomCode();
-      setModalMessage(
-        `🎉 Congrats! You won $5! DM @uclabv with code ${randomCode} along with a screenshot to claim your prize.`
-      );
-    } else {
-      // User doesn't win
-      setModalMessage('Today is not your lucky day. Try again tomorrow.');
-    }
-
-    // Open the modal
-    setIsModalOpen(true);
-  };
-
   const closeModal = () => {
     setIsModalOpen(false);
   };

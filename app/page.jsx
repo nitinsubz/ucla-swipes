@@ -18,19 +18,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-indigo-100 pb-11 font-mono">
       <Navbar />
-      
-      {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-6 px-6 text-center shadow-lg border-b-4 border-indigo-700">
-        <h1 className="text-3xl font-bold mb-2">Welcome back to UCLA! 🐻</h1>
-        <p className="text-lg opacity-95">Get ready for the best food in the world, in the best city in the world</p>
-        <div className="mt-3 flex justify-center space-x-2">
-          <span className="text-2xl">🍕</span>
-          <span className="text-2xl">🌮</span>
-          <span className="text-2xl">🍜</span>
-          <span className="text-2xl">🌴</span>
-        </div>
-      </div>
-      
       <div className="m-10">
         <Header />
         <div className="text-center">

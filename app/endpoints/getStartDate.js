@@ -35,6 +35,7 @@ SELECT * FROM exceptions
 WHERE quarter = '{current_quarter}' AND plan = '{plan}';
 */
 
+
 const getStartDate = () => {
 
   return {

@@ -44,7 +44,7 @@ const get7PSwipes = (mockDate) => {
   let except = '';
   if (specialDates[todayDate] != undefined) {
     except =
-      'Today you have ' +
+      'Today, you have ' +
       specialDates[todayDate] +
       ' swipe(s) instead of ' +
       getSwipesConsumer(startDate);

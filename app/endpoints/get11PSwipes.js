@@ -20,7 +20,7 @@ const get11PSwipes = (mockDate) => {
   let dateData = getStartDate();
   let startDate = dateData.startDate;
   let today = dateData.today;
-  const startingSwipes = 128;
+  const startingSwipes = 121;
 
   if (!mockDate && today.getTime() < startDate.getTime()) {
     return {
@@ -36,7 +36,7 @@ const get11PSwipes = (mockDate) => {
   }
 
 
-  var specialDates = {"November 27, 2025": 0, "November 28, 2025": 0, "November 29, 2025": 0};
+  var specialDates = {};
 
   let total = startingSwipes;
   while (startDate.toLocaleString('en-US', options) != todayDate) {
@@ -51,7 +51,7 @@ const get11PSwipes = (mockDate) => {
 
   if (specialDates[todayDate] != undefined) {
     except =
-      'Today you have ' +
+      'Today, you have ' +
       specialDates[todayDate] +
       ' swipe(s) instead of ' +
       getSwipesConsumer(startDate);

@@ -39,7 +39,7 @@ const getStartDate = () => {
 
   return {
     startDate: new Date('January 4, 2026'),
-    today: new Date('')
+    today: new Date()
   };
 };
 

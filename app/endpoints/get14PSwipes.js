@@ -14,7 +14,7 @@ const get14PSwipes = (mockDate) => {
   let dateData = getStartDate();
   let startDate = dateData.startDate;
   let today = dateData.today;
-  const startingSwipes = 151;
+  const startingSwipes = 158;
 
   if (!mockDate && today.getTime() < startDate.getTime()) {
     return {
@@ -29,7 +29,7 @@ const get14PSwipes = (mockDate) => {
     todayDate = new Date(mockDate).toLocaleString('en-US', options)
   }
 
-  var specialDates = { 'January 4, 2026': 1, 'March 29, 2026': 1 };
+  var specialDates = { 'September 20, 2026': 1, 'November 26, 2026': 0, 'November 27, 2026': 0, 'November 28, 2026': 0, 'November 29, 2026': 1 };
   
   let total = startingSwipes;
   
